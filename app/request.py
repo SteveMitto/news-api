@@ -3,7 +3,7 @@ from config import Config
 from .models import NewsSource
 
 api_key =Config.API_KEY
-source_url =f'https://newsapi.org/v2/sources?apiKey={api_key} '
+source_url =f'https://newsapi.org/v2/sources?language=en&apiKey={api_key} '
 
 
 def get_sources():

@@ -1,10 +1,11 @@
 class NewsSource:
-    def __init__(self,id,name,url,category,language,country):
+    def __init__(self,id,name,url,description,category,language,country):
         '''This function creates an object for the news sources'''
         self.id= id
         self.name = name
         self.url = url
-        self.category = category
+        self.description = description
+        self.category = category.capitalize()
         self.language = language
         self.country = country
 
