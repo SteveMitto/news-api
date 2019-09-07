@@ -17,13 +17,13 @@ def get_sources():
         for source in sources:
             id= source.get('id')
             name = source.get('name')
-            # descreption = source.get('description')
+            description = source.get('description')
             url = source.get('url')
             category = source.get('category')
             language = source.get('language')
             country = source.get('country')
 
-            source_object = NewsSource(id,name,url,category,language,country)
+            source_object = NewsSource(id,name,url,description,category,language,country)
             sources_list.append(source_object)
         return sources_list
 
