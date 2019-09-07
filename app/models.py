@@ -10,11 +10,12 @@ class NewsSource:
         self.country = country
 
 class NewsArticle:
-    def __init__(self,author,title,description,image,published,content):
+    def __init__(self,author,title,description,url,image,published,content):
         ''' This function creates an instance of a source news '''
         self.author = author
         self.title = title
         self.description = description
+        self.url = url
         self.image = image
         self.published = published
         self.content = content

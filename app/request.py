@@ -42,11 +42,16 @@ def get_source_article(source_id):
             author = article.get('author')
             title = article.get('title')
             description = article.get('description')
-            image = article.get('image')
-            published = article.get('published')
+            url = article.get('url')
+            image = article.get('urlToImage')
+            published = article.get('publishedAt')
             content = article.get('content')
 
             if image:
-                article_object = NewsArticle(author,title,description,image,published,content)
+                article_object = NewsArticle(author,title,description,url,image,published,content)
                 articles_list.append(article_object)
+            elif image == '':
+                article_objectw = NewsArticle(author,title,description,url,image,published,content)
+                articles_list.append(article_object)
+
     return articles_list
