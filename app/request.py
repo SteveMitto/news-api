@@ -3,7 +3,7 @@ from config import Config
 from .models import NewsSource
 
 api_key =Config.API_KEY
-source_url =f'https://newsapi.org/v2/sources?apiKey={api_key}'
+source_url =f'https://newsapi.org/v2/sources?apiKey={api_key} '
 
 
 def get_sources():
@@ -17,14 +17,14 @@ def get_sources():
         for source in sources:
             id= source.get('id')
             name = source.get('name')
-            descreption = source.get('description')
+            # descreption = source.get('description')
             url = source.get('url')
             category = source.get('category')
             language = source.get('language')
             country = source.get('country')
 
-            source_object = NewsSource(id,name,descreption,url,category,language,country)
-            source_list.append(source_object)
+            source_object = NewsSource(id,name,url,category,language,country)
+            sources_list.append(source_object)
         return sources_list
 
     else:
