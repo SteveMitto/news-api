@@ -25,7 +25,7 @@ Not really sure if there is any but contact me when you find one at mittosteve@g
 Lets talk more on mittosteve@gmail.com
 
 ## Link to website
-
+to view the live deployment use the following link https://urnews.herokuapp.com
 ## License and Copyright information
 MIT License
 
