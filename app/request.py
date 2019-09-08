@@ -48,10 +48,20 @@ def get_source_article(source_id):
             content = article.get('content')
 
             if image:
-                article_object = NewsArticle(author,title,description,url,image,published,content)
-                articles_list.append(article_object)
+                if description == 'None':
+                    description = content
+                    article_object = NewsArticle(author,title,description,url,image,published,content)
+                    articles_list.append(article_object)
+                else:
+                    article_object = NewsArticle(author,title,description,url,image,published,content)
+                    articles_list.append(article_object)
             elif image == '':
-                article_objectw = NewsArticle(author,title,description,url,image,published,content)
-                articles_list.append(article_object)
+                if description == 'None':
+                    description = content
+                    article_objectw = NewsArticle(author,title,description,url,image,published,content)
+                    articles_list.append(article_object)
+                else:
+                    article_object = NewsArticle(author,title,description,url,image,published,content)
+                    articles_list.append(article_object)
 
     return articles_list

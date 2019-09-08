@@ -1,7 +1,46 @@
 {% import 'marcos.html' as macro %}
 {% extends 'base.html' %}
 
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/articles.css')}}">
+{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style>
+    .top{
+      height :70vh;
+      padding:0;
+      color:white;
+    }
+    .bg{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+      padding:40px;
+    }
+    .bg h3{
+      font-size: 3em;
+      padding:10px;
+    }
+    .bg small{
+      font-size:15px;
+      font-style: italic;
+      padding:10px;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
+<div class="container-fluid top" style="background: url({{randTop.image}}) no-repeat;background-size:cover;">
+  <div class="bg container-fluid" style="background-color:rgba(0,0,0,.8);height:100%">
+  <h3>{{randTop.title}}</h3>
+  <small>{{randTop.description}}</small>
+  <a href="{{randTop.url}}" target="_blank" class="btn btn-sm btn-primary">More Details</a>
+  </div>
+</div>
+<h2>Found Articles</h2>
 <div class="container-fluid">
   <div class="row">
     {{ macro.showNewsArticles(articles) }}

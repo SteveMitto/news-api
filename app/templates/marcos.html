@@ -19,18 +19,14 @@
   <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3" style="height:370px">
 
     <div class="card">
-      {% if article.image %}
         <img src="{{article.image}}" alt="" class="img-responsive">
-      {% else %}
-        <img src="images/news.jpg" alt="" class="img-responsive">
-      {% endif %}
       <div class="card-body">
         <h4 class="card-header">{{article.title}}</h4>
-        <p class="card-text">{{article.description}}</p>
+        <p class="card-text">{{article.description | truncate(100)}}<a href="{{article.url}}" target="_blank" class="card-link">Read More</a></p>
         {% if author %}
         <small>{{article.author}} </small> <small>{{article.published}}</small>
         {% else %}
-        <small>{{article.published}}</small> <a href="{{article.url}}" target="_blank" class="card-link">more details</a>
+        <small>{{article.published}}</small>
         {% endif %}
       </div>
     </div>
