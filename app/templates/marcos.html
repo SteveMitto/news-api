@@ -1,11 +1,16 @@
 {% macro displaySources(sources) %}
+
     {% for source in sources %}
 
+    <div class="" style="margin:3px;">
       <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 card" style="max-height:200px;">
         <h4>{{source.name}}</h4>
-        <p>{{source.description | truncate(70) }}</p>
-        <small>category :{{source.category}}</small><br>
-        <a class="btn btn-primary btn-sm" href="/news-article/{{source.id}}">link to {{source.name}}</a>
+        <p>{{source.description | truncate(100) }}</p>
+        <div class="card-footer">
+        <small>category :{{source.category}}</small>
+        <a class="btn btn-sm" style="background:white;color:blue;" href="/news-article/{{source.id}}">See articles</a>
+      </div>
+      </div>
       </div>
 
 
