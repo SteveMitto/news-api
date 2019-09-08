@@ -18,5 +18,5 @@ class NewsArticle:
         self.description = description
         self.url = url
         self.image = image
-        self.published = (datetime.datetime.strptime(str(published),"%Y-%m-%dT%H:%M:%SZ")).strftime("%w %b %Y ")
+        self.published = published
         self.content = content
