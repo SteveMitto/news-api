@@ -8,6 +8,9 @@
 {% block head %}
   {{ super() }}
   <style>
+    body{
+      font-family: 'Nunito', sans-serif;
+    }
     .top{
       height :70vh;
       padding:0;
@@ -29,18 +32,50 @@
       font-style: italic;
       padding:10px;
     }
+    .card-body{
+      padding:20px;
+    }
+    .card:hover{
+      transition:.5s;
+      background:rgba(0,0,0,.1)
+    }
+    .sources{
+      text-align:center;
+      font-weight:light;
+      font-style:italic;
+      padding:20px;
+      position:relative;
+    }
+    .sources::before{
+      content:'';
+      position:absolute;
+      top:40px;
+      height:2px;
+      background:blue;
+      width:40%;
+      right: 1.5%
+    }
+    .sources::after{
+      content:'';
+      position:absolute;
+      top:40px;
+      height:2px;
+      background:blue;
+      width:40%;
+      left: 1.5%
+    }
   </style>
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid top" style="background: url({{randTop.image}}) no-repeat;background-size:cover;">
+<div class="container-fluid top" style="background: url({{randTop.image}}) no-repeat;background-size:cover;background-position:center;background-attachment:fixed;">
   <div class="bg container-fluid" style="background-color:rgba(0,0,0,.8);height:100%">
   <h3>{{randTop.title}}</h3>
   <small>{{randTop.description}}</small>
   <a href="{{randTop.url}}" target="_blank" class="btn btn-sm btn-primary">More Details</a>
   </div>
 </div>
-<h2>Found Articles</h2>
+<h2 class="sources">Found Articles</h2>
 <div class="container-fluid">
   <div class="row">
     {{ macro.showNewsArticles(articles) }}
