@@ -2,6 +2,42 @@
 {% extends 'base.html' %}
 
 {% block content%}
+{% block head %}
+  {{ super() }}
+  <style>
+
+    .top{
+      height :70vh;
+      padding:0;
+      color:white;
+    }
+    .bg{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+      padding:40px;
+    }
+    .bg h3{
+      font-size: 3em;
+      padding:10px;
+    }
+    .bg small{
+      font-size:15px;
+      font-style: italic;
+      padding:10px;
+    }
+  </style>
+{% endblock %}
+<div class="container-fluid top" style="height:70vh;background: url({{breakingNews.image}}) no-repeat;background-size:cover;">
+  <div class="bg container-fluid" style="background-color:rgba(0,0,0,.8);height:100%">
+  <h3>{{breakingNews.title}}</h3>
+  <small>{{breakingNews.description}}</small>
+  <a href="{{breakingNews.url}}" target="_blank" class="btn btn-sm btn-primary">More Details</a>
+  <br><br>
+    <small></small>
+  </div>
+</div>
 <h3>Sources</h3>
 <div class="container">
 <div class="row">
