@@ -1,3 +1,4 @@
+import datetime
 class NewsSource:
     def __init__(self,id,name,url,description,category,language,country):
         '''This function creates an object for the news sources'''
@@ -17,5 +18,5 @@ class NewsArticle:
         self.description = description
         self.url = url
         self.image = image
-        self.published = published
+        self.published = (datetime.datetime.strptime(str(published),"%Y-%m-%dT%H:%M:%SZ")).strftime("%w %b %Y ")
         self.content = content
