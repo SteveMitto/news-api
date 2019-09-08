@@ -8,7 +8,8 @@ def main():
     source_len =len(sources)
     rand_source = random.randint(0,source_len-1)
     rand_source_id = sources[rand_source].id
-    if rand_source_id == 'bloomberg':
+    while rand_source_id == 'bloomberg':
+        #bloomberg brings a bug
         rand_source = random.randint(0,source_len-1)
         breakingNews = get_source_article(rand_source_id)[0]
         brekingSite = sources[rand_source].name
