@@ -1,0 +1,54 @@
+{% import 'marcos.html' as macro%}
+{% extends 'base.html' %}
+
+{% block head %}
+{{super()}}
+<style media="screen">
+  .card{
+    height:250px;
+    padding:10px;
+    background:rgba(0,0,0,.015);
+    border-radius:10px;
+  }
+  .card h4{
+    padding:10px;
+  }
+  .card p{
+    padding:5px;
+    font-style:italic;
+    line-height:20px;
+  }
+  .card-footer{
+    background:rgb(0,0,155);
+    color:white;
+    padding:25px;
+    padding:5px;
+    border-radius:10px;
+
+  }
+  .card-footer small{
+    margin-right:20px;
+  }
+  .card:hover{
+    transition:.5s;
+    background:rgba(0,0,0,.1);
+
+  }
+</style>
+{% endblock %}
+{% block content%}
+
+<div class="container">
+  <div class="row">
+    {% if searched_sources %}
+    {{ macro.displaySources(searched_sources)}}
+    {% else %}
+    <div style="text-align:center;">
+    <p>Sorry couldnt find {{ name }} news source</p>
+    <a href="/" class="btn btn-primary btn-sm"> Back Home</a>
+    {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

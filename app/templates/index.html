@@ -33,6 +33,12 @@
       text-align:center;
       padding:20px;
       position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    .sources .form-group{
+      padding:20px;
     }
     .sources::before{
       content:'';
@@ -96,6 +102,12 @@
 <div class="container-fluid sources">
 <h3 >News Sources</h3>
 <p>Select a news source of your choice to view news articles</p>
+<form  method="get">
+<div class="form-group" style="width:300px;display:flex;">
+  <input type="text" class="form-control" name="search"  placeholder="Find Source">
+  <input type="submit" name="" class="btn btn-primary"value="Submit">
+</div>
+</form>
 <div class="container">
 <div class="row">
   {{ macro.displaySources(sources) }}
