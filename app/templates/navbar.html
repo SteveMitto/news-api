@@ -37,6 +37,9 @@
   <small class="head">Ur News</small>
   <a href="/" class="text">Home</a>
   <br>
+  {% if four %}
+  <p></p>
+  {% else %}
   {% if title %}
   <h4 class="breaking">{{ title }} Headlines</h4>
   {% else %}
@@ -45,6 +48,6 @@
     {% else %}
     <h4 class="breaking">{{brekingSite}} TOP NEWS </h4>
     {% endif %}
-
+    {% endif %}
   {% endif %}
 </div>

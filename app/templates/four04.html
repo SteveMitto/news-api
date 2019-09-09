@@ -1,1 +1,48 @@
+{% extends 'base.html' %}
 
+{% block head %}
+{{ super() }}
+<style media="screen">
+  body{
+    background-image:url('static/images/mans.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+  }
+  .btn{
+    background-color:blue;
+    margin-top:15px;
+    border-radius:15px;
+  }
+  .my-error{
+    width:700px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    float:left;
+    align-items:center;
+    padding:100px;
+  }
+  h3{
+    font-size:5em;
+    color:darkblue;
+    font-weight:bolder;
+    l
+  }
+  h5{
+    font-weight:bold;
+    text-align:center;
+    letter-spacing:1px;
+    font-style:italic;
+    line-height:25px;
+  }
+
+</style>
+{% endblock %}
+{% block content %}
+  <div class="container-fluid my-error">
+    <h3>404 ERROR </h3>
+    <h5>The page you are looking for may have been removed had its name changed or is unavailable or it has been removed</h5>
+    <a href="/" class="btn btn-primary">Go To Homepage</a>
+  </div>
+{% endblock %}
