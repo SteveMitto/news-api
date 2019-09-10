@@ -19,8 +19,7 @@ To Setup this app \n
   NOTE: You need an apikey to run it so register one through https://newsapi.org
 
 ## Bugs and Errors
-Not really sure if there is any but contact me when you find one at mittosteve@gmail.com
-
+Some of the photos of the articles have a longer height thus affecting the display of content
 ## Contact Me
 Lets talk more on mittosteve@gmail.com
 
