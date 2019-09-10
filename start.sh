@@ -1,1 +1,1 @@
-python3.6 run.py server
+python3.6 run.py server 
