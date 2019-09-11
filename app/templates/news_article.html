@@ -71,14 +71,14 @@
     .card:hover .img-responsive{
       z-index:-1;
       transform:scale(1.2);
-      filter: brightness(100%);
+      filter: brightness(130%);
     }
   </style>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid top" style="background: url({{randTop.image}}) no-repeat;background-size:cover;background-position:center;background-attachment:fixed;">
-  <div class="bg container-fluid" style="background-color:rgba(0,0,0,.8);height:100%">
+  <div class="bg container-fluid" style="text-align:center;background-color:rgba(0,0,0,.8);height:100%">
   <h3>{{randTop.title}}</h3>
   <small>{{randTop.description}}</small>
   <a href="{{randTop.url}}" target="_blank" class="btn btn-sm btn-primary">More Details</a>
