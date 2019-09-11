@@ -64,6 +64,15 @@
       width:40%;
       left: 1.5%
     }
+    .img-responsive{
+      transition:.5s ease-in-out;
+      filter: brightness(80%);
+    }
+    .card:hover .img-responsive{
+      z-index:-1;
+      transform:scale(1.2);
+      filter: brightness(100%);
+    }
   </style>
 {% endblock %}
 

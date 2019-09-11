@@ -39,16 +39,12 @@ def news_article(source_id):
             title = source.name
     articles.pop(rand_article)
     print(articles)
-    # tite = list(id.splice("-"))
-    # title= ''.join(tite)
 
 
     return r_t('news_article.html', title = title, articles = articles,randTop = randTop)
 
 @news.route('/source/search/<name>',methods = ['POST', 'GET'])
 def source_search(name):
-    # movie_name_list = movie_name.split(" ")
-    # movie_name_format = "+".join(movie_name_list)
     sources = get_sources()
     searched_sources = []
     for source in sources:
