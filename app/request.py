@@ -56,7 +56,7 @@ def get_source_article(source_id):
                     article_object = NewsArticle(author,title,description,url,image,published,content)
                     articles_list.append(article_object)
             elif image == '':
-                image ='../static/images/mans.png'
+                image ='../static/images/news.jpg'
                 if description == 'None':
                     description = content
                     article_objectw = NewsArticle(author,title,description,url,image,published,content)
